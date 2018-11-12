@@ -17,19 +17,19 @@ class Song
     @@count += 1
   end
 
-  def count
+  self.count
     @@count
   end
 
-  def genres
+  self.genres
     @@genres
   end
 
-  def artists
+  self.artists
     @@artists
   end
 
-  def genre_count
+  self.genre_count
     @@genre_count
   end
 
