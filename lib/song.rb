@@ -1,9 +1,7 @@
 class Song
   @@count = 0
   @@artists = []
-  @@artist_count = {}
   @@genres = []
-  @@genre_count = {}
 
   attr_accessor :name, :artist, :genre
 
@@ -21,18 +19,34 @@ class Song
   end
 
   self.genres
-    @@genres
+    @@genres.uniq
   end
 
   self.artists
-    @@artists
+    @@artists.uniq
   end
 
   self.genre_count
-    @@genre_count
+    total = {}
+    @@genres.each do |genre|
+      if total.include?(genre)
+        total[genre] += 1
+      else
+        total[genre] = 1
+      end
+    end
+    total
   end
 
   self.artist_count
-    @@artist_count
+  total = {}
+  @@artists.each do |genre|
+    if total.include?(genre)
+      total[genre] += 1
+    else
+      total[genre] = 1
+    end
+  end
+  total
   end
 end
