@@ -14,19 +14,19 @@ class Song
     @@count += 1
   end
 
-  self.count
+  def self.count
     @@count
   end
 
-  self.genres
+  def self.genres
     @@genres.uniq
   end
 
-  self.artists
+  def self.artists
     @@artists.uniq
   end
 
-  self.genre_count
+  def self.genre_count
     total = {}
     @@genres.each do |genre|
       if total.include?(genre)
@@ -38,7 +38,7 @@ class Song
     total
   end
 
-  self.artist_count
+  def self.artist_count
   total = {}
   @@artists.each do |genre|
     if total.include?(genre)
