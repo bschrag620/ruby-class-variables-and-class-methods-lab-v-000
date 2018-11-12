@@ -17,7 +17,7 @@ class Song
     else
       @@artist_count[artist] += 1
     end
-    
+
     @genre = genre
     if !@@genres.include?(genre)
       @@genres << genre
@@ -49,4 +49,3 @@ class Song
     @@artist_count
   end
 end
-
