@@ -1,5 +1,5 @@
 class Song
-  @@song_count = 0
+  @@count = 0
   @@artists = []
   @@artist_count = {}
   @@genres = []
@@ -26,11 +26,11 @@ class Song
       @@genre_count[genre] += 1
     end
 
-    @@song_count += 1
+    @@count += 1
   end
 
   def count
-    @@song_count
+    @@count
   end
 
   def genres
